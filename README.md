@@ -11,7 +11,12 @@
 
 ## 📌 Project Overview
 
-Customer churn is one of the biggest challenges in the telecom industry. Losing a customer costs **5x more** than retaining one. This project builds a machine learning model that identifies at-risk customers **before** they leave — giving businesses time to act.
+This project predicts customer churn using the IBM Telco Customer Churn dataset.
+The goal was to identify customers likely to leave based on their service usage,
+billing behavior, and contract type.
+
+I built a Random Forest classification model using Scikit-learn and evaluated
+it using accuracy, precision, recall and F1-score metrics.
 
 ---
 
@@ -61,5 +66,38 @@ Customer churn is one of the biggest challenges in the telecom industry. Losing 
 | Seaborn | Statistical charts |
 
 ---
-
 ## 📁 Project Structure
+
+```
+churn-prediction/
+│
+├── churn_model.py       # Main ML pipeline
+├── churn_results.png    # Model performance charts
+├── README.md            # Project documentation
+└── .gitignore           # Git ignore rules
+```
+
+
+## 🚀 How to Run
+
+```bash
+git clone https://github.com/madhur8600/churn-prediction.git
+cd churn-prediction
+python3 -m venv venv
+source venv/bin/activate
+pip install pandas numpy scikit-learn matplotlib seaborn
+python3 churn_model.py
+```
+
+
+
+## 🧠 What I Learned
+
+- Understood how to handle real-world messy data (TotalCharges stored as text)
+- Learned why class imbalance affects model performance differently for each class
+- Practiced feature encoding — converting Yes/No columns and multi-class columns
+- Understood the difference between accuracy, precision and recall in practice
+
+---
+
+*Built from scratch as part of my AI/ML portfolio development*
